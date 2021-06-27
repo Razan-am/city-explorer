@@ -23,7 +23,6 @@ class App extends Component {
       latitude:axiosResponed.data.lat,
       longitude:axiosResponed.data.lon,
     })
-    console.log(axiosResponed.data[0])
   }
   render() {
     return (

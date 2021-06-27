@@ -17,13 +17,12 @@ class App extends Component {
   }
   handlerSubmit =async (e)=>{
     e.preventDefault()
-    let axiosResponed = await axios.get(`https://eu1.locationiq.com/v1/search.php?key=pk.0a80fd547a3c1e8574e39921b81514c5&q=${this.state.cityName}&format=json`)
+    let axiosResponed = await axios.get(``)
     this.setState({
       cityName:axiosResponed.data.cityName,
-      latitude:axiosResponed.data.lat,
-      longitude:axiosResponed.data.lon,
+      latitude:axiosResponed.data.latitude,
+      longitude:axiosResponed.data.longitude,
     })
-    console.log(axiosResponed.data[0])
   }
   render() {
     return (
@@ -32,9 +31,7 @@ class App extends Component {
           <input type='text' placeholder='City Name' onChange={(e)=>{this.handlerData(e)}}/>
           <button>Explorer!</button>
         </form>
-        <h1>{this.state.cityName}</h1>
-        <h1>{this.state.latitude}</h1>
-        <h1>{this.state.longitude}</h1>
+        
       </div>
     )
   }

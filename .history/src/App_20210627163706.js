@@ -17,12 +17,12 @@ class App extends Component {
   }
   handlerSubmit =async (e)=>{
     e.preventDefault()
-    let axiosResponed = await axios.get(`https://eu1.locationiq.com/v1/search.php?key=pk.0a80fd547a3c1e8574e39921b81514c5&q=${this.state.cityName}&format=json`)
-    this.setState({
-      cityName:axiosResponed.data.cityName,
-      latitude:axiosResponed.data.lat,
-      longitude:axiosResponed.data.lon,
-    })
+    let axiosResponed = await axios.get(`https://eu1.locationiq.com/v1/search.php?key=pk.0a80fd547a3c1e8574e39921b81514c5&q=${this.state.cityName}`)
+    // this.setState({
+    //   cityName:axiosResponed.data.cityName,
+    //   latitude:axiosResponed.data.lat,
+    //   longitude:axiosResponed.data.lon,
+    // })
     console.log(axiosResponed.data[0])
   }
   render() {
