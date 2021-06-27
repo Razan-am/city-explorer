@@ -33,7 +33,7 @@ class App extends Component {
       <div>
         <form onSubmit={this.handlerSubmit} style={{marginLeft: '100px',paddingTop:'20px',display:'block',width:'100px'}}>
           <input type='text' placeholder='City Name' onChange={(e)=>{this.handlerData(e)}}/>
-          <button style={{marginLeft: '200px',display:'block',width:'100px'}}>Explorer!</button>
+          <button style={{marginLeft: '200px',display:'block',width:'10px'}}>Explorer!</button>
         </form>
         <h5>{this.state.display_name}</h5>
         <h5>{this.state.latitude}</h5>

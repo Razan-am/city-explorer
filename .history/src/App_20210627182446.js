@@ -31,14 +31,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handlerSubmit} style={{marginLeft: '100px',paddingTop:'20px',display:'block',width:'100px'}}>
+        <form onSubmit={this.handlerSubmit}>
           <input type='text' placeholder='City Name' onChange={(e)=>{this.handlerData(e)}}/>
-          <button style={{marginLeft: '200px',display:'block',width:'100px'}}>Explorer!</button>
+          <button>Explorer!</button>
         </form>
         <h5>{this.state.display_name}</h5>
         <h5>{this.state.latitude}</h5>
         <h5>{this.state.longitude}</h5>
-        <Image alt='map' src={`https://maps.locationiq.com/v3/staticmap?key=pk.0a80fd547a3c1e8574e39921b81514c5&center=${this.state.latitude},${this.state.longitude}&zoom=1-8`} fluid style={{margin: '100px',width:'1000px'}} />
+        <Image alt='map' src={`https://maps.locationiq.com/v3/staticmap?key=pk.0a80fd547a3c1e8574e39921b81514c5&center=${this.state.latitude},${this.state.longitude}&zoom=1-8`} fluid style={{margin: '500px'};{width:'300px'}}/>
       </div>
     )
   }
