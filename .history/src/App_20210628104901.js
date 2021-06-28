@@ -28,7 +28,7 @@ class App extends Component {
         display_name: axiosResponed.data[0].display_name,
         latitude: axiosResponed.data[0].lat,
         longitude: axiosResponed.data[0].lon,
-        alert:false,
+        alert: false,
         show: true,
 
       })
@@ -36,7 +36,6 @@ class App extends Component {
     }catch (error){
       this.setState({
         error:"please provide a valid city name",
-        alert:true,
         show:false,
       })
     }

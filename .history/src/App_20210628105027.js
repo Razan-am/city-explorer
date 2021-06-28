@@ -28,7 +28,7 @@ class App extends Component {
         display_name: axiosResponed.data[0].display_name,
         latitude: axiosResponed.data[0].lat,
         longitude: axiosResponed.data[0].lon,
-        alert:false,
+        alert: false,
         show: true,
 
       })

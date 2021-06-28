@@ -28,7 +28,6 @@ class App extends Component {
         display_name: axiosResponed.data[0].display_name,
         latitude: axiosResponed.data[0].lat,
         longitude: axiosResponed.data[0].lon,
-        alert:false,
         show: true,
 
       })
@@ -57,6 +56,7 @@ class App extends Component {
             <h5>{this.state.display_name}</h5>
             <Image alt='map' src={`https://maps.locationiq.com/v3/staticmap?key=pk.0a80fd547a3c1e8574e39921b81514c5&center=${this.state.latitude},${this.state.longitude}&zoom=1-8`} fluid style={{ margin: '100px', width: '1000px' }} />
           </span>
+          {this.state.alret}
         }
       </>
     )
